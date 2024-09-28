@@ -1,11 +1,13 @@
-# 1. Scraping simples de uma página
-# Objetivo: Fazer uma requisição a um site de notícias, extrair os títulos das notícias
-# da página inicial e salvar em um arquivo CSV.
-# Exemplo de site: https://www.bbc.com
-# Passos:
-# Use requests para baixar o conteúdo da página.
-# Use BeautifulSoup para extrair os títulos das notícias (geralmente estão em tags <h1>, <h2> ou <a>).
-# Armazene os dados em um DataFrame do pandas e exporte para um arquivo CSV.
+'''
+1. Scraping simples de uma página
+Objetivo: Fazer uma requisição a um site de notícias, extrair os títulos das notícias
+da página inicial e salvar em um arquivo CSV.
+Exemplo de site: https://www.bbc.com
+Passos:
+Use requests para baixar o conteúdo da página.
+Use BeautifulSoup para extrair os títulos das notícias (geralmente estão em tags <h1>, <h2> ou <a>).
+Armazene os dados em um DataFrame do pandas e exporte para um arquivo CSV.
+'''
 
 import requests
 from bs4 import BeautifulSoup
@@ -40,5 +42,5 @@ def simple_scraping(user_url):
         print("No titles found on the page.")
 
 
-url = input('\nPlease, insert a valid URL: ')
+url = input("\nPlease, insert a valid URL: ")
 simple_scraping(url)
